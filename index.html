@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="MTG" manifest="cache.manifest">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<title>Multiplayer MTG</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body ng-controller="CardCtrl" ng-press="deal()" bg="card" disable-scrolling>
+		<ul>
+			<li ng-repeat="(type, cards) in decks" ng-press="startGame(type)" ng-show="!deck">{{type}}</li>
+		</ul>
+
+		<script src="angular.min.js"></script>
+		<script src="mtg.js"></script>
+	</body>
+</html>
