@@ -37,6 +37,7 @@ body{
 
 ul{
 	list-style-type: none;
+	padding: 0;
 }
 
 ul li{
@@ -50,5 +51,9 @@ ul li{
 }
 
 ul li:hover{
-	background: #aaa;
+	background: #285E8E;
+}
+
+[ng-cloak]{
+	display: none;
 }

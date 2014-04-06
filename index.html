@@ -7,9 +7,9 @@
 		<title>Multiplayer MTG</title>
 		<link rel="stylesheet" href="style.css">
 	</head>
-	<body ng-controller="CardCtrl" ng-press="deal()" bg="card" disable-scrolling>
-		<ul>
-			<li ng-repeat="(type, cards) in decks" ng-press="startGame(type)" ng-show="!deck">{{type}}</li>
+	<body ng-controller="CardCtrl" ng-click="deal()" ng-keypress="deal()" ng-style="cardStyle" ng-cloak disable-scrolling>
+		<ul ng-show="!deck">
+			<li ng-repeat="(type, cards) in decks" ng-click="startGame(type)">{{type}}</li>
 		</ul>
 
 		<script src="angular.min.js"></script>
